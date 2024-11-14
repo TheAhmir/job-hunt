@@ -1,0 +1,12 @@
+# Ignore build and deployment artifacts
+bin/
+obj/
+
+# Ignore user-specific files
+.vscode/
+*.user
+*.suo
+
+# Ignore logs, temporary files, and debugging output
+*.log
+*.tmp

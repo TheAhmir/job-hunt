@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Applications</title>
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+    <!-- jQuery -->
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables JS -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+</head>
+<body>
+    <h1>My Applications</h1>
+    <p>Total number of applications: <span id="rowCount"></span></p>
+    <div>
+        {{ table|safe }}
+    </div>
+    <script>
+        $(document).ready(function() {
+            var table = $('.data').DataTable();
+            $('#rowCount').text(table.rows().count());
+        });
+    </script>
+</body>
+</html>
